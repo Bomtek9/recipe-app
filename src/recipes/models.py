@@ -12,6 +12,9 @@ class Recipe (models.Model):
     description = models.TextField()
     pic = models.ImageField(upload_to='recipes', default='no_image.svg')
 
+    def get_absolute_url(self):
+        return reverse('recipes:detail', kwargs={'pk': self.pk})
+
     # calculate difficulty of recipe using cooking time and number of ingredients
     def calculate_difficulty(self):
         ingredients = self.ingredients.split(', ')
@@ -24,9 +27,6 @@ class Recipe (models.Model):
         elif self.cooking_time >= 30 and len(ingredients) >= 7:
             difficulty = 'Hard'
         return difficulty
-
-    def get_absolute_url(self):
-        return reverse('recipes:detail', kwargs={'pk': self.pk})
 
     def __str__(self):
         return str(self.name)

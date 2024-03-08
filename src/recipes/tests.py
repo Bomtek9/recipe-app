@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import Recipe
 from .forms import RecipesSearchForm
+from django.urls import reverse
 
 # Create your tests here.
 
@@ -27,8 +28,10 @@ class RecipeModelTest(TestCase):
         self.assertEqual(recipe_cookingtime, 'in minutes')
 
     def test_get_absolute_url(self):
+        # get absolute_url takes you to the detail page of the first recipe
         recipe = Recipe.objects.get(id=1)
-        self.assertEqual(recipe.get_absolute_url(), '/list/1')
+        # Loads to the url /recipes/list/1
+        self.assertEqual(recipe.get_absolute_url(), '/recipes/list/1')
 
     def test_difficulty_calculation(self):
         recipe = Recipe.objects.get(id=1)
