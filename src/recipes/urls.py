@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import welcome, home
+from .views import welcome
 from .views import RecipeListView
 from .views import RecipeDetailView
 from .views import records

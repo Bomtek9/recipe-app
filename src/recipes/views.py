@@ -10,13 +10,10 @@ from .utils import get_recipename_from_id, get_chart
 
 # Create your views here.
 
-
 def welcome(request):
     return render(request, 'recipes/recipes_home.html')
 
 
-def home(request):
-    return render(request, 'recipes/home.html')
 
 class RecipeListView(LoginRequiredMixin, ListView):
     model = Recipe
