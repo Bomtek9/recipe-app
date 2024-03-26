@@ -1,11 +1,9 @@
 from django.db import models
 from django.shortcuts import reverse
+from django.utils.html import format_html
+from django.utils.safestring import mark_safe
 
-
-# Create your models here.
-
-
-class Recipe (models.Model):
+class Recipe(models.Model):
     name = models.CharField(max_length=120)
     cooking_time = models.FloatField(default=-1, help_text='in minutes')
     ingredients = models.CharField(max_length=350, default='')
@@ -15,7 +13,6 @@ class Recipe (models.Model):
     def get_absolute_url(self):
         return reverse('recipes:detail', kwargs={'pk': self.pk})
 
-    # calculate difficulty of recipe using cooking time and number of ingredients
     def calculate_difficulty(self):
         ingredients = self.ingredients.split(', ')
         if self.cooking_time < 30 and len(ingredients) < 7:
@@ -30,3 +27,11 @@ class Recipe (models.Model):
 
     def __str__(self):
         return str(self.name)
+
+    def image_tag(self):
+        if self.pic:
+            return format_html('<img src="{}" style="max-width: 100px; max-height: 100px;" />'.format(self.pic.url))
+        else:
+            return format_html('<img src="{}" style="max-width: 100px; max-height: 100px;" />'.format('/media/no_picture.png'))
+
+    image_tag.short_description = 'Image'
