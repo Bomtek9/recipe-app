@@ -10,7 +10,7 @@ class Recipe (models.Model):
     cooking_time = models.FloatField(default=-1, help_text='in minutes')
     ingredients = models.CharField(max_length=350, default='')
     description = models.TextField()
-    pic = models.ImageField(upload_to='recipes', default='no_image.jpg')
+    pic = models.ImageField(upload_to='recipes', default='no_picture.png')
 
     def get_absolute_url(self):
         return reverse('recipes:detail', kwargs={'pk': self.pk})

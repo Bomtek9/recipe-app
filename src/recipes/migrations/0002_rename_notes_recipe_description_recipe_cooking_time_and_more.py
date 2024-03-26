@@ -28,6 +28,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='recipe',
             name='pic',
-            field=models.ImageField(default='no_image.svg', upload_to='recipes'),
+            field=models.ImageField(default='no_picture.png', upload_to='recipes'),
         ),
     ]
