@@ -1,11 +1,21 @@
 {% extends 'recipes/base.html' %}
 
 {% block content %}
+<style>
+    body {
+        background-image: url('/static/img/kitchen.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+</style>
 <h1>Recipes</h1>
-<ul>
+<ul class="recipe-list">
     {% for recipe in object_list %}
-    <li>
-        <a href="{% url 'recipes:detail' recipe.pk %}">
+    <li class="recipe-item">
+        <a href="{% url 'recipes:detail' recipe.pk %}" class="recipe-name">
             {{ recipe.name }}
         </a>
         <img src="{{ recipe.pic.url }}" alt="{{ recipe.name }}" class="recipe-img">
