@@ -4,7 +4,7 @@
 
 <style>
     body {
-        background-image: url('/static/img/main_pic.jpg');
+        background-image: url('/static/img/main_background.jpg');
         background-size: cover;
         background-position: center;
         height: 100vh;
@@ -16,10 +16,10 @@
 <ul class="recipe-list">
     {% for recipe in object_list %}
     <li class="recipe-item">
+        <img src="{{ recipe.pic.url }}" alt="{{ recipe.name }}" class="recipe-img">
         <a href="{% url 'recipes:detail' recipe.pk %}" class="recipe-name">
             {{ recipe.name }}
         </a>
-        <img src="{{ recipe.pic.url }}" alt="{{ recipe.name }}" class="recipe-img">
     </li>
     {% endfor %}
 </ul>
