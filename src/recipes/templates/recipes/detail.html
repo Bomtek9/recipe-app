@@ -1,9 +1,40 @@
 {% extends 'recipes/base.html' %}
 
 {% block content %}
-<h1>{{ object.name }}</h1>
-<p>{{ object.description }}</p>
-<img src="{{ object.pic.url }}" alt="{{ object.name }}">
-<p>Cooking Time: {{ object.cooking_time }} minutes</p>
-<p>Ingredients: {{ object.ingredients }}</p>
+<style>
+    body {
+        background-image: url('/static/img/details_page.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .detail-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+
+    }
+
+    .detail-content {
+        margin-left: 500px;
+        text-decoration: rgb(53, 94, 169);
+
+        /* Adjust the value to shift content to the right */
+    }
+</style>
+
+<div class="detail-container">
+    <div class="detail-content">
+        <h1>{{ object.name }}</h1>
+        <p>{{ object.description }}</p>
+        <img src="{{ recipe.pic.url }}" alt="{{ recipe.name }}" class="recipe-img">
+        <p>Cooking Time: {{ object.cooking_time }} minutes</p>
+        <p>Ingredients: {{ object.ingredients }}</p>
+        <p>Difficulty: {{ object.calculate_difficulty }}</p>
+    </div>
+</div>
+
 {% endblock %}

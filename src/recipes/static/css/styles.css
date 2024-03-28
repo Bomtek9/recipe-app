@@ -1,3 +1,70 @@
+/* Navigation bar styles */
+nav {
+    background-color: transparent;
+    /* Background color */
+    color: rgb(12, 161, 181);
+    /* Text color */
+    padding: 10px 0;
+    /* Padding */
+}
+
+/* Navigation item styles */
+.nav-item {
+    display: inline-block;
+    /* Display items horizontally */
+    margin-right: 20px;
+    /* Spacing between items */
+}
+
+/* Navigation link styles */
+.nav-link {
+    color: rgb(255, 255, 255);
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+    padding: 5px 10px;
+    /* Padding */
+}
+
+
+/* Hover effect for navigation links */
+.nav-link:hover {
+    background-color: #708f80;
+    /* Darker background color on hover */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/img/home_background.jpg');
+    background-size: cover;
+    /* Ensure the background image covers the entire background */
+    background-position: center;
+    font-family: Arial, sans-serif;
+    /* Set the body height to cover the entire viewport minus the footer height */
+    height: calc(100vh - 60px);
+    /* Assuming the footer height is 60px, adjust as needed */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 120px;
+}
+
+h1 {
+    color: #f4efef;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #faf7f8;
+    background-color: transparent;
+    font-size: 20px;
+}
+
 /* Add styles for the entire list */
 ul.recipe-list {
     list-style-type: none;
@@ -22,13 +89,29 @@ img.recipe-img {
 /* Add styles for recipe name */
 a.recipe-name {
     font-weight: bold;
-    color: #333;
+    color: #ecdfdf;
     text-decoration: none;
     /* Remove underline from links */
 }
 
 /* Add styles for recipe name on hover */
 a.recipe-name:hover {
-    color: #555;
+    color: #fff6f6;
     /* Darken the text color on hover */
+}
+
+
+
+/* Footer styles */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    font-size: smaller;
+    padding: 10px 0;
+    color: #f8f8f7;
+    /* Text color */
 }

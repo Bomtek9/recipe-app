@@ -13,11 +13,11 @@
 <body>
     <header>
         <!-- Add your header content here -->
-        <h1>Recipe App</h1>
+        <!-- Navigation bar -->
         <nav>
-            <ul>
-                <li><a href="{% url 'recipes:home' %}">Home</a></li>
-                <li><a href="{% url 'recipes:list' %}">Browse Recipes</a></li>
+            <ul class="navbar">
+                <li class="nav-item"><a href="{% url 'recipes:home' %}" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="{% url 'recipes:list' %}" class="nav-link">Browse Recipes</a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +25,7 @@
         {% block content %}
         {% endblock %}
     </main>
-    <footer>
+    <footer class="footer">
         <!-- Add your footer content here -->
         <p>&copy; 2024 Recipe App</p>
     </footer>

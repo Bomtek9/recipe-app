@@ -1,66 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'recipes/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe App</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('/static/img/home_background.jpg');
-            background-size: cover;
-            /* Ensure the background image covers the entire background */
-            background-position: center;
-            font-family: Arial, sans-serif;
-            height: 100vh;
-            /* Set the body height to cover the entire viewport */
-            overflow: hidden;
-            /* Prevent scrolling if the image is larger than the viewport */
-
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            padding-top: 120px;
-
-        }
-
-        h1 {
-            color: #f4efef;
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #f2f2ed;
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-
-        a {
-
-            color: rgb(103, 202, 187);
-
-        }
-
-        a:hover {
-            color: rgb(212, 203, 203);
-            /* Change color on hover */
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <h1>Welcome to the Recipe App</h1>
-        <p>Find delicious recipes for every occasion!</p>
-        <p><a href="{% url 'recipes:list' %}">Browse Recipes</a></p>
-    </div>
-</body>
-
-</html>
+{% block content %}
+<div class="container">
+    <h1>Welcome to the Recipe App</h1>
+    <p>Find delicious recipes for every occasion!</p>
+</div>
+{% endblock %}
