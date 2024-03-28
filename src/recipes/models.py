@@ -5,7 +5,7 @@ from django.utils.safestring import mark_safe
 
 class Recipe(models.Model):
     name = models.CharField(max_length=120)
-    cooking_time = models.FloatField(default=-1, help_text='in minutes')
+    cooking_time = models.IntegerField(default=-1, help_text='in minutes')
     ingredients = models.CharField(max_length=350, default='')
     description = models.TextField()
     pic = models.ImageField(upload_to='recipes', default='no_picture.png')
