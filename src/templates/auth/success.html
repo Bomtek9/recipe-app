@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- basic html design -->
+<html>
+<title>Recipe App</title>
+<style>
+    body {
+        background: url("{% static '/img/logout_background.jpg' %}") no-repeat fixed;
+        background-size: cover;
+        position: relative;
+    }
+
+    h1 {
+        color: rgb(243, 243, 243);
+    }
+
+    button {
+        background-color: wheat;
+        color: rgb(255, 251, 251);
+    }
+
+    .container {
+        display: flex;
+        height: 50vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-family: "Roboto Mono", sans-serif;
+    }
+
+    .item {
+        padding: 5px;
+        width: 50%;
+        height: 40%;
+        margin: 10px;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 1.5em;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <h1>Bye from the Recipe App!</h1>
+            <br />
+            <br />
+            Feel free to come back anytime.
+            <a href="{% url 'login' %}" style="font-size: 1em">Login Again?</a>
+        </div>
+    </div>
+</body>
+
+</html>
+<a href="{% url 'login' %}" style="font-size: 1em">Login again?</a>

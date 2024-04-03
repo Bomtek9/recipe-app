@@ -18,6 +18,13 @@
             <ul class="navbar">
                 <li class="nav-item"><a href="{% url 'recipes:home' %}" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="{% url 'recipes:list' %}" class="nav-link">Browse Recipes</a></li>
+                <!-- Modify the login button to include login/logout logic -->
+                {% if user.is_authenticated %}
+                <li class="nav-item"><a href="{% url 'logout' %}?next={% url 'recipes:list' %}"
+                        class="nav-link">Logout</a></li>
+                {% else %}
+                <li class="nav-item"><a href="{% url 'login' %}" class="login_btn">Login</a></li>
+                {% endif %}
             </ul>
         </nav>
     </header>

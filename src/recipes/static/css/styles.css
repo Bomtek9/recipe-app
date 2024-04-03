@@ -16,6 +16,8 @@ nav {
     /* Spacing between items */
 }
 
+
+
 /* Navigation link styles */
 .nav-link {
     color: rgb(255, 255, 255);
@@ -24,6 +26,21 @@ nav {
     /* Remove underline */
     padding: 5px 10px;
     /* Padding */
+}
+
+.login_btn {
+    color: rgb(255, 255, 255);
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+    padding: 5px 10px;
+    /* Padding */
+}
+
+/* Hover effect for login button */
+.login_btn:hover {
+    background-color: #708f80;
+    /* Darker background color on hover */
 }
 
 
