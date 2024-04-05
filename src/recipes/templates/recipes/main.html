@@ -2,26 +2,24 @@
 
 {% block content %}
 
-<style>
-    body {
-        background-image: url('/static/img/main_background.jpg');
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-    }
-</style>
 
-<ul class="recipe-list">
-    {% for recipe in object_list %}
-    <li class="recipe-item">
-        <img src="{{ recipe.pic.url }}" alt="{{ recipe.name }}" class="recipe-img">
-        <a href="{% url 'recipes:detail' recipe.pk %}" class="recipe-name">
-            {{ recipe.name }}
-        </a>
-    </li>
-    {% endfor %}
-</ul>
+<div class="recipe-flex-container">
+    <div class="recipe-center-div">
+        <div class="grid-layout">
+            {% for recipe in object_list %}
+            <div class="recipes-container">
+                <a href="{% url 'recipes:detail' recipe.pk %}" class="recipe-wrapper">
+                    <img src="{{ recipe.pic.url }}" alt="{{ recipe.name }}" class="recipe-image">
+                    <div class="recipe-main-holder">
+                        <p class="recipe-link">{{ recipe.name }}</p>
+                        <p class="recipe-description">{{ recipe.description }}</p>
+                    </div>
+                </a>
+                <div class="top-notch"></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}

@@ -50,6 +50,7 @@ nav {
     /* Darker background color on hover */
 }
 
+/* Add these styles to your styles.css file */
 body {
     margin: 0;
     padding: 0;
@@ -62,6 +63,7 @@ body {
     height: calc(100vh - 60px);
     /* Assuming the footer height is 60px, adjust as needed */
 }
+
 
 .home-container {
     max-width: 800px;
@@ -82,70 +84,109 @@ body {
     font-size: 20px;
 }
 
-
-
-/* Add styles for the entire list */
-ul.recipe-list {
-    list-style-type: none;
-    padding: 0;
+/* Update styles for recipe list */
+.recipe-flex-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 50px;
+
 }
 
-li.recipe-item {
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid #979696;
-    border-radius: 2px;
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
     justify-content: center;
     align-items: center;
-
+    margin-top: 20px;
 }
 
-/* Add styles for recipe image */
-img.recipe-img {
-    width: 100%;
-    height: 80%;
-
+.recipes-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(204, 197, 197, 0.9);
+    border-radius: 20px;
+    border: 2px solid white;
+    position: relative;
+    height: 250px;
+    /* Set a fixed height for the containers */
 }
 
-/* Add styles for recipe name */
-a.recipe-name {
-    color: #fffafa;
-    margin-top: 5px;
+.recipe-link {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    margin: 10px 0;
+    color: rgb(31, 75, 75);
     text-decoration: none;
 }
 
-/* Add styles for recipe name on hover */
-a.recipe-name:hover {
-    color: #555;
+.recipe-description {
+    text-align: center;
+    color: rgb(31, 75, 75);
+    margin-top: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    text-decoration: none !important;
+}
+
+
+.recipe-image {
+    width: 200px;
+    /* Set a fixed width for the image */
+    height: 200px;
+    /* Set a fixed height for the image */
+    border-radius: 10px 10px 10px 10px;
+    /* Set border-radius for all corners */
+    object-fit: cover;
+    /* Ensure the image covers the entire container */
+}
+
+.top-notch {
+    width: 60px;
+    height: 13px;
+    background: linear-gradient(180deg, rgba(150, 127, 97, 1) 0%, rgba(122, 104, 80, 1) 100%);
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    border-radius: 10px 10px 0 0;
 }
 
 .detail-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-
+    justify-content: center;
 }
 
 .detail-content {
-    margin-left: 500px;
-    color: #333 !important;
+    color: #fffcfc !important;
 }
 
 .detail-content h1 {
     color: cadetblue;
 }
 
-/* Footer styles */
+.form_data {
+    background-color: rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.logout-container p {
+    color: #c3c3c3;
+    background-color: transparent;
+    font-size: 20px;
+}
+
 .footer {
     position: fixed;
+    /* Position the footer fixed at the bottom */
     left: 0;
     bottom: 0;
     width: 100%;
@@ -155,4 +196,6 @@ a.recipe-name:hover {
     padding: 10px 0;
     color: #f8f8f7;
     /* Text color */
+    z-index: 999;
+    /* Ensure the footer stays above other content */
 }

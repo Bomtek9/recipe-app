@@ -1,22 +1,13 @@
 {% extends 'recipes/base.html' %}
 
 {% block content %}
-<style>
-    body {
-        background-image: url('/static/img/details_page.jpg');
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-    }
-</style>
+
 
 <div class="detail-container">
     <div class="detail-content">
         <h1>{{ object.name }}</h1>
         <p>{{ object.description }}</p>
-        <img src="{{ recipe.pic.url }}" alt="{{ recipe.name }}" class="recipe-img">
+        <img src="{{ recipe.pic.url }}" alt="{{ recipe.name }}" class="recipe-image">
         <p>Cooking Time: {{ object.cooking_time }} minutes</p>
         <p>Ingredients: {{ object.ingredients }}</p>
         <p>Difficulty: {{ object.calculate_difficulty }}</p>
