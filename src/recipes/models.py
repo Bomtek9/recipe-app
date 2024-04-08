@@ -30,8 +30,9 @@ class Recipe(models.Model):
 
     def image_tag(self):
         if self.pic:
-            return format_html('<img src="{}" style="max-width: 100px; max-height: 100px;" />'.format(self.pic.url))
+            return mark_safe('<img src="{}" style="max-width: 100px; max-height: 100px;" />'.format(self.pic.url))
         else:
-            return format_html('<img src="{}" style="max-width: 100px; max-height: 100px;" />'.format('/media/no_picture.png'))
+            return mark_safe('<img src="{}" style="max-width: 100px; max-height: 100px;" />'.format('/media/no_picture.png'))
+
 
     image_tag.short_description = 'Image'

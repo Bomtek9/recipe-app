@@ -1,50 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'recipes/base.html' %}
 
-<head>
-    <title>RecipeApp Search</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% load static %}
-    <link rel="shortcut icon" href="{% static 'recipes/images/favicon.png' %}">
-    <link rel='stylesheet' type='text/css' href="{% static 'recipes/css/styles.css' %}">
-    <style type="text/css">
-        body {
-            background: url("{% static 'recipes/images/home_background.jpg' %}") no-repeat fixed;
-            background-size: cover;
-            color: black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans-serif;
-        }
-    </style>
-</head>
+{% block content %}
+<div class="container">
+    <h1 class="mt-4 mb-4">Search Results</h1>
 
-<h1 style="font-size: 45px">Search for recipes in our database</h1>
-<hr>
-<form action="" method="POST" class="form_data">
-    {% csrf_token %}
-    {{form}}
-    <button type="submit">Search</button>
+    {% if recipes %}
+    <ul class="list-group">
+        {% for recipe in recipes %}
+        <li class="list-group-item">
+            <a href="{{ recipe.get_absolute_url }}" class="search-link">{{ recipe.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="no-recipes">No recipes found.</p>
+    {% endif %}
 
-</form>
-<br>
-<br>
-{% if recipe_df %}
-{{recipe_df|safe}}
-<br>
-<img alt='chart' src="data:image/png;base64, {{chart|safe}}">
-{% else %}
-<h3> no data</h3>
-{% endif %}
-
-<br>
-<button onclick="goBack()" class="login_btn">Back</button>
-
-<script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
-
-</html>
+    <!-- Display the chart -->
+    {% if chart %}
+    <div class="chart-container">
+        <img src="data:image/png;base64,{{ chart }}" alt="Chart">
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -12,16 +12,21 @@
 
 <body>
     <header>
-        <!-- Add your header content here -->
         <!-- Navigation bar -->
         <nav>
             <ul class="navbar">
                 <li class="nav-item"><a href="{% url 'recipes:home' %}" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="{% url 'recipes:list' %}" class="nav-link">Browse Recipes</a></li>
-                <!-- Modify the login button to include login/logout logic -->
                 {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <form method="GET" action="{% url 'recipes:search' %}" class="search-form">
+                        <input type="text" name="query" placeholder="Search Recipes">
+                        <button type="submit">Search</button>
+                    </form>
+                </li>
                 <li class="nav-item"><a href="{% url 'logout' %}?next={% url 'recipes:list' %}"
-                        class="nav-link">Logout</a></li>
+                        class="nav-link">Logout</a>
+                </li>
                 {% else %}
                 <li class="nav-item"><a href="{% url 'login' %}" class="login_btn">Login</a></li>
                 {% endif %}

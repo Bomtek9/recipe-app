@@ -50,7 +50,68 @@ nav {
     /* Darker background color on hover */
 }
 
-/* Add these styles to your styles.css file */
+/* Search bar styles */
+.search-form {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.search-form input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.search-form button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #708f80;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.search-form button[type="submit"]:hover {
+    background-color: #5c7a6b;
+}
+
+/* Styles for search results */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.list-group {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list-group-item {
+    background-color: rgba(204, 197, 197, 0.9);
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+
+.search-link {
+    color: rgb(31, 75, 75);
+
+}
+
+.no-recipes {
+    color: rgb(31, 75, 75);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -132,7 +193,7 @@ body {
     margin-top: 5px;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 
