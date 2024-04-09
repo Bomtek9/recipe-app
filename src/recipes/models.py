@@ -8,6 +8,7 @@ class Recipe(models.Model):
     cooking_time = models.IntegerField(default=-1, help_text='in minutes')
     ingredients = models.CharField(max_length=350, default='')
     description = models.TextField()
+    difficulty = models.CharField(max_length=20, blank=True)
     pic = models.ImageField(upload_to='recipes', default='no_picture.png')
 
     def get_absolute_url(self):
