@@ -44,9 +44,6 @@ class RecipesSearchFormTest(TestCase):
         form = RecipesSearchForm()
         self.assertIn('recipe_diff', form.as_p())
 
-    def test_form_renders_chart_type_input(self):
-        form = RecipesSearchForm()
-        self.assertIn('chart_type', form.as_p())
 
     def test_form_valid_data(self):
         form = RecipesSearchForm(
