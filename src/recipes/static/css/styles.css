@@ -50,30 +50,7 @@ nav {
     /* Darker background color on hover */
 }
 
-/* Search bar styles */
-.search-form {
-    display: inline-block;
-    margin-right: 20px;
-}
 
-.search-form input[type="text"] {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.search-form button[type="submit"] {
-    padding: 5px 10px;
-    background-color: #708f80;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.search-form button[type="submit"]:hover {
-    background-color: #5c7a6b;
-}
 
 /* Styles for search results */
 .container {
@@ -82,13 +59,7 @@ nav {
     padding: 20px;
 }
 
-.mt-4 {
-    margin-top: 1.5rem !important;
-}
 
-.mb-4 {
-    margin-bottom: 1.5rem !important;
-}
 
 .list-group {
     list-style: none;
@@ -144,6 +115,49 @@ body {
     background-color: transparent;
     font-size: 20px;
 }
+
+/* Search container styles */
+
+.search-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.search-container .form-group {
+    margin-bottom: 10px;
+}
+
+.search-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.search-container input[type="text"],
+.search-container select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.search-container button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #708f80;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.search-container button[type="submit"]:hover {
+    background-color: #5c7a6b;
+}
+
 
 /* Update styles for recipe list */
 .recipe-flex-container {
