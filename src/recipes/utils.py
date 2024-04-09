@@ -52,4 +52,5 @@ def get_chart(chart_type, data, **kwargs):
 
     # render the graph to a file
     chart = get_graph()
+    
     return chart
