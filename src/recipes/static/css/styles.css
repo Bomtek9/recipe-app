@@ -233,14 +233,20 @@ body {
 }
 
 .detail-container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     padding: 20px;
-    justify-content: center;
+    background-color: rgba(204, 197, 197, 0.9);
+    border-radius: 20px;
+    border: 2px solid white;
+    position: relative;
 }
 
 .detail-content {
-    color: #fffcfc !important;
+    color: #20204b !important;
 }
 
 .detail-content h1 {
