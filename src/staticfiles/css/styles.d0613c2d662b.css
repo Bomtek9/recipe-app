@@ -1,0 +1,302 @@
+/* Navigation bar styles */
+nav {
+    background-color: transparent;
+    /* Background color */
+    color: rgb(12, 161, 181);
+    /* Text color */
+    padding: 10px 0;
+    /* Padding */
+}
+
+/* Navigation item styles */
+.nav-item {
+    display: inline-block;
+    /* Display items horizontally */
+    margin-right: 20px;
+    /* Spacing between items */
+}
+
+
+
+/* Navigation link styles */
+.nav-link {
+    color: rgb(255, 255, 255);
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+    padding: 5px 10px;
+    /* Padding */
+}
+
+.login_btn {
+    color: rgb(255, 255, 255);
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+    padding: 5px 10px;
+    /* Padding */
+}
+
+/* Hover effect for login button */
+.login_btn:hover {
+    background-color: #708f80;
+    /* Darker background color on hover */
+}
+
+
+/* Hover effect for navigation links */
+.nav-link:hover {
+    background-color: #708f80;
+    /* Darker background color on hover */
+}
+
+
+
+/* Styles for search results */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+.list-group {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list-group-item {
+    background-color: rgba(204, 197, 197, 0.9);
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+
+.search-link {
+    color: rgb(31, 75, 75);
+
+}
+
+.no-recipes {
+    color: rgb(31, 75, 75);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/static/img/home_background.e1fbe6a43f14.jpg");
+    background-size: cover;
+    /* Ensure the background image covers the entire background */
+    background-position: center;
+    font-family: Arial, sans-serif;
+    /* Set the body height to cover the entire viewport minus the footer height */
+    height: calc(100vh - 60px);
+    /* Assuming the footer height is 60px, adjust as needed */
+}
+
+
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.home-container h1 {
+    color: #c3c3c3;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.home-container p {
+    color: #c3c3c3;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+/* Search container styles */
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    /* Adjust the margin-top as needed */
+}
+
+/* Style for the search form */
+.search-container .form-group {
+    margin-bottom: 10px;
+}
+
+.search-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.search-container input[type="text"],
+.search-container select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 300px;
+    /* Set a maximum width for the form inputs */
+}
+
+.search-container button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #708f80;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    /* Make the button full-width */
+    max-width: 125px;
+    /* Set a maximum width for the button */
+}
+
+.search-container button[type="submit"]:hover {
+    background-color: #5c7a6b;
+}
+
+
+/* Update styles for recipe list */
+.recipe-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 50px;
+
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Change the value to 4 for 4 recipes per row */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 1200px;
+    /* Optional: Set a maximum width for the grid */
+    margin: 0 auto;
+    /* Optional: Center the grid horizontally */
+}
+
+.recipes-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(204, 197, 197, 0.9);
+    border-radius: 20px;
+    border: 2px solid white;
+    position: relative;
+    height: 250px;
+    /* Set a fixed height for the containers */
+}
+
+.recipes-container * {
+    text-decoration: none !important;
+}
+
+.recipe-link {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    margin: 10px 0;
+    color: rgb(31, 75, 75);
+    text-decoration: none;
+}
+
+.recipe-description {
+    text-align: center;
+    color: rgb(31, 75, 75);
+    margin-top: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    text-decoration: none !important;
+    display: block;
+    /* Ensure the span takes up full width */
+}
+
+
+.recipe-image {
+    width: 200px;
+    /* Set a fixed width for the image */
+    height: 200px;
+    /* Set a fixed height for the image */
+    border-radius: 10px 10px 10px 10px;
+    /* Set border-radius for all corners */
+    object-fit: cover;
+    /* Ensure the image covers the entire container */
+}
+
+.top-notch {
+    width: 60px;
+    height: 13px;
+    background: linear-gradient(180deg, rgba(150, 127, 97, 1) 0%, rgba(122, 104, 80, 1) 100%);
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    border-radius: 10px 10px 0 0;
+}
+
+
+.detail-container {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(204, 197, 197, 0.9);
+    border-radius: 20px;
+    border: 2px solid white;
+    position: relative;
+}
+
+.detail-content {
+    color: #20204b !important;
+}
+
+.detail-content h1 {
+    color: cadetblue;
+}
+
+.form_data {
+    background-color: rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.logout-container p {
+    color: #c3c3c3;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.footer {
+    position: fixed;
+    /* Position the footer fixed at the bottom */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    font-size: smaller;
+    padding: 10px 0;
+    color: #f8f8f7;
+    /* Text color */
+    z-index: 999;
+    /* Ensure the footer stays above other content */
+}
