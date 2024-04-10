@@ -2,6 +2,7 @@ from django.db import models
 from django.shortcuts import reverse
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
+from cloudinary.models import CloudinaryField
 
 class Recipe(models.Model):
     name = models.CharField(max_length=120)

@@ -1,10 +1,19 @@
 
 import os
 from pathlib import Path
+import cloudinary
+import cloudinary_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dd55e7o7z',
+    'API_KEY': '957289254467523',
+    'API_SECRET': 'SyFVsBI8TBNPkaEjdUbyelz6Y7M'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -29,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Recipe project related apps
     'recipes',
-    'users'
+    'users',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
