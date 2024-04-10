@@ -119,14 +119,16 @@ body {
 /* Search container styles */
 
 .search-container {
-    background-color: #f9f9f9;
-    padding: 20px;
-    max-width: 600px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    /* Adjust the margin-top as needed */
 }
 
+/* Style for the search form */
 .search-container .form-group {
     margin-bottom: 10px;
 }
@@ -143,6 +145,8 @@ body {
     border: 1px solid #ccc;
     border-radius: 3px;
     width: 100%;
+    max-width: 300px;
+    /* Set a maximum width for the form inputs */
 }
 
 .search-container button[type="submit"] {
@@ -152,6 +156,10 @@ body {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    width: 100%;
+    /* Make the button full-width */
+    max-width: 125px;
+    /* Set a maximum width for the button */
 }
 
 .search-container button[type="submit"]:hover {
@@ -167,7 +175,14 @@ body {
     min-height: 100vh;
     padding-top: 80px;
     padding-bottom: 50px;
-
+    background-image: url('/static/img/home_background.jpg');
+    /* Set the background image to cover the entire container */
+    background-size: cover;
+    /* Ensure the background image covers the entire container */
+    background-repeat: no-repeat;
+    /* Prevent the background image from repeating */
+    background-position: center;
+    /* Center the background image */
 }
 
 .grid-layout {
@@ -247,7 +262,7 @@ body {
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 20px;
     background-color: rgba(204, 197, 197, 0.9);

@@ -1,8 +1,8 @@
 {% extends 'recipes/base.html' %}
 
 {% block content %}
-<h1 style="color: white;">Search Recipes</h1>
 <form method="post" class="search-container">
+    <h1 style="color:cadetblue;">Search Recipes</h1>
     {% csrf_token %}
     <div class="form-group">
         <label for="id_recipe_diff">Recipe Difficulty:</label>
@@ -12,24 +12,27 @@
 </form>
 
 {% if recipe_df %}
-<div class="container mt-4">
-
-    <ul class="list-group">
-        {% for recipe in qs %}
-        <li class="list-group-item">
-            <a href="{% url 'recipes:detail' pk=recipe.pk %}" class="search-link">{{ recipe.name }}</a>
-            <br>
-            <div><strong>Cooking Time:</strong> {{ recipe.cooking_time }} minutes</div>
-            <br>
-            <div><strong>Description:</strong> {{ recipe.description }}</div>
-            <br>
-            <div><strong>Ingredients:</strong></div>
-            <div>{{ recipe.ingredients }}</div>
-        </li>
-        {% empty %}
-        <p class="no-recipes">No recipes found.</p>
-        {% endfor %}
-    </ul>
+<div class="recipe-flex-container">
+    <div class="recipe-center-div">
+        <div class="grid-layout">
+            {% for recipe in qs %}
+            <div class="recipes-container">
+                <a href="{% url 'recipes:detail' pk=recipe.pk %}" class="recipe-wrapper">
+                    <img src="{{ recipe.pic.url }}" alt="{{ recipe.name }}" class="recipe-image">
+                    <div class="recipe-main-holder">
+                        <p class="recipe-link">{{ recipe.name }}</p>
+                        <span class="recipe-description">{{ recipe.description|truncatechars:30 }}</span>
+                    </div>
+                </a>
+                <div class="top-notch"></div>
+            </div>
+            {% empty %}
+            <p class="no-recipes">No recipes found.</p>
+            {% endfor %}
+        </div>
+    </div>
 </div>
+{% else %}
+<p class="no-recipes">No recipes found.</p>
 {% endif %}
 {% endblock %}
