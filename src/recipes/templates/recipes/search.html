@@ -13,14 +13,18 @@
 
 {% if recipe_df %}
 <div class="container mt-4">
-    <h2 class="mb-4">Search Results:</h2>
+
     <ul class="list-group">
         {% for recipe in qs %}
         <li class="list-group-item">
             <a href="{% url 'recipes:detail' pk=recipe.pk %}" class="search-link">{{ recipe.name }}</a>
-            <div>{{ recipe.cooking_time }} minutes</div>
+            <br>
+            <div><strong>Cooking Time:</strong> {{ recipe.cooking_time }} minutes</div>
+            <br>
+            <div><strong>Description:</strong> {{ recipe.description }}</div>
+            <br>
+            <div><strong>Ingredients:</strong></div>
             <div>{{ recipe.ingredients }}</div>
-            <div>{{ recipe.description }}</div>
         </li>
         {% empty %}
         <p class="no-recipes">No recipes found.</p>

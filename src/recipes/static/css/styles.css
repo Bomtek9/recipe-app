@@ -172,11 +172,16 @@ body {
 
 .grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    /* Change the value to 4 for 4 recipes per row */
     gap: 20px;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    max-width: 1200px;
+    /* Optional: Set a maximum width for the grid */
+    margin: 0 auto;
+    /* Optional: Center the grid horizontally */
 }
 
 .recipes-container {
@@ -193,6 +198,10 @@ body {
     /* Set a fixed height for the containers */
 }
 
+.recipes-container * {
+    text-decoration: none !important;
+}
+
 .recipe-link {
     text-align: center;
     font-family: "Montserrat", sans-serif;
@@ -207,7 +216,9 @@ body {
     margin-top: 5px;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
-    text-decoration: none;
+    text-decoration: none !important;
+    display: block;
+    /* Ensure the span takes up full width */
 }
 
 

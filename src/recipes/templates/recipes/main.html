@@ -12,7 +12,7 @@
                     <img src="{{ recipe.pic.url }}" alt="{{ recipe.name }}" class="recipe-image">
                     <div class="recipe-main-holder">
                         <p class="recipe-link">{{ recipe.name }}</p>
-                        <p class="recipe-description">{{ recipe.description }}</p>
+                        <span class="recipe-description">{{ recipe.description|truncatechars:30 }}</span>
                     </div>
                 </a>
                 <div class="top-notch"></div>
