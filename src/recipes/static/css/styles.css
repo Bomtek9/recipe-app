@@ -175,14 +175,7 @@ body {
     min-height: 100vh;
     padding-top: 80px;
     padding-bottom: 50px;
-    background-image: url('/static/img/home_background.jpg');
-    /* Set the background image to cover the entire container */
-    background-size: cover;
-    /* Ensure the background image covers the entire container */
-    background-repeat: no-repeat;
-    /* Prevent the background image from repeating */
-    background-position: center;
-    /* Center the background image */
+
 }
 
 .grid-layout {
@@ -257,6 +250,7 @@ body {
     right: 30px;
     border-radius: 10px 10px 0 0;
 }
+
 
 .detail-container {
     max-width: 600px;

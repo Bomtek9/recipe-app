@@ -5,7 +5,7 @@
     <h1 style="color:cadetblue;">Search Recipes</h1>
     {% csrf_token %}
     <div class="form-group">
-        <label for="id_recipe_diff">Recipe Difficulty:</label>
+        <label for="id_recipe_diff"></label>
         {{ form.recipe_diff }}
     </div>
     <button type="submit" class="btn">Search</button>
@@ -24,7 +24,6 @@
                         <span class="recipe-description">{{ recipe.description|truncatechars:30 }}</span>
                     </div>
                 </a>
-                <div class="top-notch"></div>
             </div>
             {% empty %}
             <p class="no-recipes">No recipes found.</p>
