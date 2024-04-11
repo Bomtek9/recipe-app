@@ -18,7 +18,7 @@
             {% for recipe in qs %}
             <div class="recipes-container">
                 <a href="{% url 'recipes:detail' pk=recipe.pk %}" class="recipe-wrapper">
-                    <img src="{{ recipe.pic.url }}" alt="{{ recipe.name }}" class="recipe-image">
+                    <img src="{{ recipe.pic }}" alt="{{ recipe.name }}" class="recipe-image">
                     <div class="recipe-main-holder">
                         <p class="recipe-link">{{ recipe.name }}</p>
                         <span class="recipe-description">{{ recipe.description|truncatechars:30 }}</span>

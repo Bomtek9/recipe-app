@@ -10,7 +10,7 @@ class Recipe(models.Model):
     ingredients = models.CharField(max_length=350, default='')
     description = models.TextField()
     difficulty = models.CharField(max_length=20, blank=True)
-    pic = models.ImageField(upload_to='recipes', default='no_picture.png')
+    pic = models.URLField(default='', blank=True) 
 
     def get_absolute_url(self):
         return reverse('recipes:detail', kwargs={'pk': self.pk})
